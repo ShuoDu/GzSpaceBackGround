@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>格子铺列表</h1>
+<ul>
+{%for store in store_list%}
+<li>
+  <a href="{{store.id}}">
+    {{store.name}}
+  </a>
+</li>
+{%endfor%}
+</ul>
+</body>
+</html>
