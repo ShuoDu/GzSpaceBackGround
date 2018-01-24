@@ -57,6 +57,12 @@ def space_detail(request):
     return HttpResponse(all_json)
 
 
+def my_image(request):
+   image_data=open("picture.png", "rb").read()
+   return HttpResponse(image_data, mimetype="image/png")
+
+
+
 # 商铺图片
 def space_imgs(request):
     all_imgs = models.stoere_imgs.objects.all()
