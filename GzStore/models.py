@@ -31,6 +31,7 @@ class gz_store(models.Model):
     gz_price = models.IntegerField(default=0, verbose_name='格子平均价格')
     address = models.CharField(max_length=200, verbose_name='商铺地址')  # 商铺地址
     gz_goods = models.CharField(max_length=300, verbose_name='商品列表')  # 商品列表
+    store_img = models.ImageField(upload_to='img', verbose_name='商铺图片')
     store_type = models.ForeignKey('gz_storeType')
     list_filter = ['name']
     search_fields = ['name']
@@ -39,8 +40,9 @@ class gz_store(models.Model):
         return "%s" % self.name
 
     def toDict(self):
+        print self.store_img.url
         return {'name': self.name, 'gz_no': self.gz_no, 'use_no': self.use_no,
-                'phone': self.phone, 'gz_price': self.gz_price, 'address': self.address, 'gz_goods':self.gz_goods}
+                'phone': self.phone, 'gz_price': self.gz_price, 'address': self.address, 'gz_goods': self.gz_goods, 'store_img':self.store_img.url}
 
 
 class store_detail(models.Model):
