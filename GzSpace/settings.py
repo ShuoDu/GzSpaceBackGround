@@ -30,8 +30,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-# Application definition
-
 INSTALLED_APPS = [
     'django_admin_bootstrapped',
     'django.contrib.admin',
@@ -46,7 +44,10 @@ INSTALLED_APPS = [
     'GzStore',
     'GzFind',
     'GzOrder',
-    'djcelery'
+    'djcelery',
+    'GzCellManage',
+    'GzAllSpace',
+
 ]
 
 MIDDLEWARE_CLASSES = (

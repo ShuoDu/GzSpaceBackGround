@@ -63,15 +63,6 @@ def my_image(request):
 
 
 
-# 商铺图片
-def space_imgs(request):
-    all_imgs = models.stoere_imgs.objects.all()
-    obj_arr = []
-    for i in all_imgs:
-        obj_arr.append(i.store_img.url)
-
-    return HttpResponse(obj_arr)
-
 
 
 

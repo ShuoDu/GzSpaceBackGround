@@ -39,8 +39,8 @@ class gz_order_detail(models.Model):
         verbose_name = '订单详情'
         verbose_name_plural = '订单详情'
     order_no = models.CharField(max_length=20)  # 订单号
-    order_type = models.IntegerField(default=0)  # 订单类型
-    order_statue = models.CharField(max_length=100)  # 订单状态
+    order_type = models.IntegerField(default=0)  # 订单类型 1商品订单，2格子订单
+    order_statue = models.CharField(max_length=100)  # 订单状态 1 已下单 2 待发货 3 待收货 4 待评价
 
     store_no = models.CharField(max_length=20)  # 商户号
     store_name = models.CharField(max_length=20, blank=True)  # 商铺名称
@@ -77,3 +77,6 @@ class gz_order_detail(models.Model):
                 'gz_goods_no': self.gz_goods_no, 'gz_goods_img': self.gz_goods_img,
                 'gz_goods_content': self.gz_goods_content,
                 'gz_goods_price': self.gz_goods_price}
+
+
+# 评价表

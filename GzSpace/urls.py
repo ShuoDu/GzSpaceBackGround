@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^store/', include('GzStore.urls')),
     url(r'^find/', include('GzFind.urls')),
     url(r'^order/', include('GzOrder.urls')),
+    url(r'^gzManage/', include('GzCellManage.urls')),
 ]
